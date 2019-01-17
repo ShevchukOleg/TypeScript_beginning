@@ -14,16 +14,16 @@ function factorial(num: number): number | string {
 factorial(0);
 
 // Task 2
-function multiply(...arr: number[]): number{
+function multiply(num: number,...arr: number[]): number{
 
   let result: number = arr.reduce(function(sum, item){
       return sum + item;
-    });
+    }, num);
 
   return result;
 }
 
-multiply(1, 2, 3);
+console.log(multiply(1, 2, 3));
 
 //Task 3
 
@@ -45,6 +45,12 @@ function reverseStr2(str: string): string {
   return newStr;
 }
 reverseStr2("Simple string!");
+
+function reverseStr3(str: string): string {
+
+  return  str.split("").reverse().join("");
+  ;
+}
 
 //Task 4
 interface AdminInterface {

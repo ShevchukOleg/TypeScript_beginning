@@ -11,13 +11,13 @@ function factorial(num) {
 }
 factorial(0);
 // Task 2
-function multiply(...arr) {
+function multiply(num, ...arr) {
     let result = arr.reduce(function (sum, item) {
         return sum + item;
-    });
+    }, num);
     return result;
 }
-multiply(1, 2, 3);
+console.log(multiply(1, 2, 3));
 //Task 3
 function reverseStr(str) {
     return '\u202E' + str;
@@ -32,6 +32,10 @@ function reverseStr2(str) {
     return newStr;
 }
 reverseStr2("Simple string!");
+function reverseStr3(str) {
+    return str.split("").reverse().join("");
+    ;
+}
 function printLabel(labelledObj) {
     console.log(labelledObj.label);
 }
